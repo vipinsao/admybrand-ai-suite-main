@@ -198,33 +198,32 @@ const FAQSection = () => {
                     </motion.div>
                   </motion.button>
 
-                  {/* Answer Content */}
-                  <AnimatePresence>
-                    {openFAQ === faq.id && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{
-                          duration: 0.3,
-                          ease: "easeInOut",
-                          opacity: { delay: openFAQ === faq.id ? 0.1 : 0 },
-                        }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-6 pb-6 border-t border-gray-700/30">
-                          <motion.p
-                            className="text-gray-300 leading-relaxed pt-4"
-                            initial={{ y: -10, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.3, delay: 0.1 }}
-                          >
-                            {faq.answer}
-                          </motion.p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  {/* Answer Content - FIXED HERE */}
+
+                  {openFAQ === faq.id ? (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        ease: "easeInOut",
+                        opacity: { delay: openFAQ === faq.id ? 0.1 : 0 },
+                      }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 pb-6 border-t border-gray-700/30">
+                        <motion.p
+                          className="text-gray-300 leading-relaxed pt-4"
+                          initial={{ y: -10, opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          transition={{ duration: 0.3, delay: 0.1 }}
+                        >
+                          {faq.answer}
+                        </motion.p>
+                      </div>
+                    </motion.div>
+                  ) : null}
                 </div>
               </motion.div>
             ))}
