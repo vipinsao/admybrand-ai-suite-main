@@ -82,8 +82,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 ## 🧑‍💻 Author
 
 **Vipin Chandra Sao**  
-Aspiring Software Engineer | Full Stack Developer | Passionate about building impactful products  
-[GitHub](https://github.com/your-username) • [Twitter](https://twitter.com/your-handle)
+Aspiring Software Engineer | Full Stack Developer | Vibe Coder | Passionate about building impactful products  
 
 ---
 
